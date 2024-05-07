@@ -76,6 +76,29 @@
 <?php get_footer() ?>
 <script src="https://unpkg.com/html5-qrcode"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    const WebSocket = ws;
+
+    // Buat server WebSocket
+    const wss = new WebSocket.Server({
+        port: 8080
+    });
+
+    // Tangani koneksi baru
+    wss.on('connection', function connection(ws) {
+        console.log('Klien terhubung');
+
+        // Tangani pesan dari klien
+        ws.on('message', function incoming(message) {
+            console.log(`Pesan diterima: ${message}`);
+
+            // Kirim pesan balik ke klien (jika perlu)
+            ws.send(`Echo: ${message}`);
+        });
+    });
+
+    console.log('Server WebSocket berjalan di ws://localhost:8080');
+</script>
 
 <script>
     // Skrip untuk menginisialisasi Html5Qrcode
@@ -91,8 +114,7 @@
 
         // Fungsi yang akan dipanggil saat QR code berhasil di-scan
         function onScanSuccess(decodedText, decodedResult) {
-            $('#qrcode_value').val(decodedText);
-            let id = decodedText;
+            // Bersihkan scanner setelah scan berhasil
             htmlscanner.clear().then(_ => {
                 $.ajax({
                     url: "<?php echo routeTo('guestbook/cekTamu') ?>",
@@ -100,7 +122,7 @@
                     data: {
                         _token: document.querySelector('[name=_token]').value,
                         qrcode_value: id,
-                        event_id: <?= $_GET['filter']['event_id'] ?>
+                        event_id: <?= $_GET['filter']['event_id'] ?>,
                     },
                     success: function(response) {
                         try {
@@ -108,26 +130,20 @@
                                 response = JSON.parse(response);
                             }
                             if (response.success) {
-                                Swal.fire({
-                                    title: "Berhasil!",
+                                // Simpan pesan ke Firebase Realtime Database
+                                const database = firebase.database();
+                                database.ref('messages/').push({
                                     text: response.message,
-                                    icon: "success"
+                                    timestamp: firebase.database.ServerValue.TIMESTAMP
                                 });
-                                $('.barcode-result-text').text('');
-                                const closeButton = document.querySelector('.close-btn');
-                                if (closeButton) {
-                                    closeButton.click();
-                                }
+                                // Alihkan ke halaman lain setelah menyimpan pesan
+                                window.location.href = 'screen-attendance.php';
                             } else {
                                 Swal.fire({
                                     title: "Gagal!",
                                     text: response.message,
                                     icon: "error"
                                 });
-                                const closeButton = document.querySelector('.close-btn');
-                                if (closeButton) {
-                                    closeButton.click();
-                                }
                             }
                         } catch (e) {
                             console.error('Error parsing response:', e);
@@ -138,9 +154,10 @@
                     }
                 });
             }).catch(error => {
-                alert('something wrong');
+                alert('Terjadi kesalahan');
             });
         }
+
 
         function onScanFailure(error) {
             // handle scan failure, usually better to ignore and keep scanning.

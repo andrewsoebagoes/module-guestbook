@@ -14,5 +14,8 @@
     'qrcode_value' => 'QRCode Value',
     'created_by' => 'Created By',
     'created_at' => 'Created At',
-    'gb_attendances' => 'Attendances'
+    'gb_attendances' => 'Attendances',
+    'scan'          => 'Scan',
+    'attendance' => 'Attendance',
+    'event' => 'Event'
 ];

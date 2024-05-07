@@ -42,7 +42,11 @@
         ],
     ],
     'gb_attendances' => [
-        'guest_id' => [
+        'event_id' => [
+            'label' => __('guestbook.label.event'),
+            'type' => 'options-obj:gb_events,id,name'
+        ],
+        'guest_name' => [
             'label' => __('guestbook.label.guest'),
             'type' => 'options-obj:gb_guests,id,name'
         ],

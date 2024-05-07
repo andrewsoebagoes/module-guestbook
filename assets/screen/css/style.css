@@ -291,7 +291,8 @@
 }
 
 .login-5 .info{
-    max-width: 650px;
+    /* max-width: 1100px; */
+    text-align: center;
 }
 
 .login-5 .info p {

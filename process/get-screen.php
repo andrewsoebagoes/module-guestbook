@@ -3,7 +3,7 @@
 use Core\Database;
 use Core\Response;
 
-$event_id = $_GET['id'];
+$event_id = $_GET['event_id'];
 $db = new Database;
 $db->query = "SELECT gb_attendances.*, gb_guests.name 
                 FROM gb_attendances 

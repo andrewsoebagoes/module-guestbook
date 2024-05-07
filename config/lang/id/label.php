@@ -17,6 +17,7 @@
     'gb_attendances' => 'Kehadiran',
     'scan'          => 'Scan',
     'attendance' => 'Kehadiran',
-    'event' => 'Acara'
+    'event' => 'Acara',
+    'screen'    => 'Screen'
 
 ];

@@ -39,37 +39,11 @@
                         <div class="line"></div>
                         <div class="line"></div>
                     </div>
-                    <?php if (isset($_GET['id'])) : ?>
                         <div class="info">
                             <div class="name_wrap" id="guestName">
                             </div>
                         </div>
-                    <?php else : ?>
-                        <div class="container d-flex justify-content-center align-items-center vh-100">
-                            <div>
-                                <h1 class="mb-4 text-center" style="color: blue;">Pilih Acara</h1>
-                                <div class="row">
-                                    <?php foreach ($acara as $acara) : ?>
-                                        <div class="col">
-                                            <div class="card text-center" style="width: 18rem;">
-                                                <div class="card-header text-primary">
-                                                    <strong>
-                                                        <?= $acara->name; ?>
-                                                    </strong>
-
-                                                </div>
-                                                <div class="card-body">
-                                                    <p class="card-text mb-0">Mulai : <?= date('d-M-Y H:i', strtotime($acara->start_at)); ?></p>
-                                                    <p class="card-text">Selesai : <?= date('d-M-Y H:i', strtotime($acara->end_at)); ?></p>
-                                                    <a href="<?= routeTo('guestbook/screen?id=' . $acara->id); ?>" class="btn btn-outline-primary d-block">Pilih</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    <?php endforeach ?>
-                                </div>
-                            </div>
-                        </div>
-                    <?php endif ?>
+              
                 </div>
             </div>
         </div>
@@ -85,7 +59,7 @@
         async function showScreen() {
             document.querySelector('#guestName').innerHTML = ``
             try {
-                const request = await fetch('<?= routeTo('guestbook/get-screen', ['id' => $_GET['id']]) ?>')
+                const request = await fetch('<?= routeTo('guestbook/get-screen', ['event_id' => $_GET['filter']['event_id']]) ?>')
                 const response = await request.json()
                 const name = response.data.name
                 const guestNameElement = document.querySelector('#guestName');

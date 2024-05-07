@@ -1,0 +1,399 @@
+
+/** Login 5 start **/
+.login-5 .form-section {
+    min-height: 100vh;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+    background: #fff2f2;
+}
+
+.text-white{
+    color: white;
+}
+
+.login-5 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'Jost', sans-serif;
+    color: #040404;
+}
+
+.login-5 a {
+    text-decoration: none;
+    color: #535353;
+}
+
+.login-5 .form-section p p{
+    color: #535353;
+}
+
+.login-5 .form-inner {
+    max-width: 500px;
+    width: 100%;
+}
+
+.login-5 .bg-img {
+    background: url(../img/education.jpg) top left repeat;
+    background-size: cover;
+    z-index: 999;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.login-5 .bg-img:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(36 10 99 / 47%);
+}
+
+.login-5 .form-section .extra-login {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.login-5 .form-section .extra-login::before {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 100%;
+    height: 1px;
+    background: #d8dcdc;
+    content: "";
+}
+
+.login-5 .form-section .extra-login > span {
+    padding: 1px 20px;
+    position: relative;
+    font-size: 15px;
+    color: #535353;
+    background: #fff2f2;
+}
+
+.login-5 .form-section .form-check-input {
+    width: 20px;
+    height: 20px;
+    margin-top: 0px;
+    position: absolute;
+    border-radius: 2px;
+    border: none;
+    background-color: #fff;
+    margin-left: -22px;
+}
+
+.login-5 .form-check-input:focus {
+    border-color: snow;
+    outline: 0;
+    box-shadow: none;
+}
+
+.login-5 .form-check-input:checked {
+    background-color: #f5c025!important;
+}
+
+.login-5 .form-section p {
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+.login-5 .form-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.login-5 .form-section .social-list li {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.login-5 .form-section .thembo {
+    margin-left: 4px;
+}
+
+.login-5 .form-section h3 {
+    margin: 0 0 25px;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.login-5 .form-section .form-group {
+    margin-bottom: 25px;
+}
+
+.login-5 .form-section .form-control {
+    padding: 11px 20px 9px;
+    font-size: 16px;
+    outline: none;
+    height: 55px;
+    color: #535353;
+    border-radius: 3px;
+    font-weight: 500;
+    border: 1px solid transparent;
+    background: #fff;
+}
+
+.login-5 .form-section .form-check {
+    margin-bottom: 0;
+}
+
+.login-5 .form-section .form-check-label {
+    padding-left: 5px;
+    font-size: 16px;
+    color: #535353;
+}
+
+.login-5 .form-section a.forgot-password {
+    font-size: 16px;
+}
+
+.login-5 .form-section a.forgot-password:hover{
+    color: #535353;
+}
+
+.login-5 .logo img {
+    margin-bottom: 15px;
+    height: 25px;
+}
+
+.login-5 .btn-theme {
+    position: relative;
+    display: inline-block;
+    border: none;
+    outline: none !important;
+    color: #ffffff;
+    text-transform: capitalize;
+    transition: all 0.3s linear;
+    z-index: 1;
+    overflow: hidden;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 400;
+    font-family: 'Jost', sans-serif;
+    border-radius: 3px;
+    width: 100%;
+}
+
+.login-5 .btn-theme:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: "";
+    border-radius: 3px;
+    transform: perspective(200px) scaleX(0.1) rotateX(90deg) translateZ(-10px);
+    transform-origin: bottom center;
+    transition: transform 0.4s linear, transform 0.4s linear;
+    z-index: -1;
+}
+
+.login-5 .btn-theme:hover:after {
+    transform: perspective(200px) scaleX(1.05) rotateX(0deg) translateZ(0);
+    transition: transform 0.4s linear, transform 0.4s linear;
+}
+
+.login-5 .btn-lg{
+    padding: 0 50px;
+    line-height: 55px;
+}
+
+.login-5 .btn{
+    box-shadow: none!important;
+}
+
+.login-5 .btn-primary{
+    background: #f5c025;
+}
+
+.login-5 .btn-primary:after {
+    background: #e3af18;
+}
+
+.login-5 .lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    z-index: -1;
+}
+
+.login-5 .line {
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+.login-5 .line::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 15vh;
+    width: 100%;
+    top: -50%;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+    animation: drop 7s 0s infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+    z-index: -888;
+}
+
+.login-5 .line:nth-child(1) {
+    margin-left: -40%;
+}
+
+.login-5 .line:nth-child(1)::after {
+    animation-delay: 1s;
+}
+
+.login-5 .line:nth-child(3) {
+    margin-left: 40%;
+}
+
+.login-5 .line:nth-child(3)::after {
+    animation-delay: 2s;
+}
+
+.login-5 .line:nth-child(4) {
+    margin-left: -20%;
+}
+
+.login-5 .line:nth-child(4)::after {
+    animation-delay: 3s;
+}
+
+.login-5 .line:nth-child(5) {
+    margin-left: 20%;
+}
+
+.login-5 .line:nth-child(5)::after {
+    animation-delay: 4s;
+}
+
+@keyframes drop {
+    0% {top: -50%; }
+    100% {top: 110%; }
+}
+
+.login-5 .info{
+    max-width: 650px;
+}
+
+.login-5 .info p {
+    color: #fff;
+    opacity: 0.8;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.login-5 .social-list li a {
+    font-size: 13px;
+    font-weight: 600;
+    width: 130px;
+    margin: 2px 0 3px 0;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 3px;
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+}
+
+.login-5 .social-list li a i{
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    float: left;
+    border-radius: 3px;
+}
+
+.login-5 .social-list li a span{
+    margin-right: 7px;
+}
+
+.login-5 .name_wrap h1 {
+    position: relative;
+    font-size: 55px;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 100px;
+    display: inline-block;
+    overflow: hidden;
+    width: 1100px;
+}
+
+.login-5 h1 span {
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    padding-left: 2px;
+}
+
+/** Social media **/
+.login-5 .facebook-bg {
+    background: #4867aa;
+}
+
+.login-5 .twitter-bg {
+    background: #33CCFF;
+}
+
+.login-5 .google-bg {
+    background: #db4437;
+}
+
+.login-5 .google-i {
+    background: #c3291c;
+}
+
+.login-5 .facebook-i {
+    background: #3b589e;
+}
+
+.login-5 .twitter-i {
+    background: #0cace0;
+}
+
+@media (max-width: 1200px){
+    .login-5 .name_wrap h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 992px){
+    .login-5 .bg-img {
+        display: none;
+    }
+
+    .login-5 .social-list li a {
+        width: 120px;
+    }
+}
+/** Login 5 end **/
+
+
+
+
+
+
+
+
+
+

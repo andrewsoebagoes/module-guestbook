@@ -16,18 +16,17 @@
         <?php endif ?>
         <div class="table-responsive table-hover table-sales">
 
-            <h2 class="mb-3">Scan
-
-                <button class="btn btn-sm btn-scan btn-outline-success" data-toggle="modal" data-target="#scanModal" type="button">
-                    <i class="mdi mdi-crop-free"></i>
-                </button>
-            </h2>
+            
+            <button class="btn btn-lg btn-scan btn-outline-success d-block mb-3 text-center" data-toggle="modal" data-target="#scanModal" type="button">
+                <i class="mdi mdi-crop-free"></i> Scan Barcode
+            </button>
+          
 
             <form action="" method="post">
                 <?= csrf_field(); ?>
                 <input type="hidden" name="qrcode_value" id="qrcode_value" class="form-control" placeholder="Scan Barcode">
-                <input type="number" name="seat_number" id="seat_number" class="form-control" placeholder="Seat Number">
-
+                <input type="text" name="seat_number" id="seat_number" class="form-control" placeholder="Nomor Kursi">
+                <button type="submit" class="btn btn-success mt-3">Kirim</button>
             </form>
         </div>
     </div>

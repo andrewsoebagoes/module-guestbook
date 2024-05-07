@@ -110,4 +110,4 @@ Page::pushFoot('<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/j
 
 Page::pushHook('index');
 
-return view('guestbook/views/scan2', compact('fields', 'tableName', 'success_msg', 'error_msg', 'crudRepository'));
+return view('guestbook/views/scan', compact('fields', 'tableName', 'success_msg', 'error_msg', 'crudRepository'));

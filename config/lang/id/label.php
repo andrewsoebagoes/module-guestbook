@@ -19,5 +19,6 @@
     'attendance' => 'Kehadiran',
     'event' => 'Acara',
     'screen'    => 'Screen',
-    'gb_guests' => 'Tamu'
+    'gb_guests' => 'Tamu',
+    'event_id' => 'Event Id'
 ];

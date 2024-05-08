@@ -17,7 +17,7 @@
 
     'gb_guests' => [
         'event_id' => [
-            'label' => __('guestbook.label.event_id'),
+            'label' => __('guestbook.label.event'),
             'type' => 'options-obj:gb_events,id,name'
         ],
         'name' => [

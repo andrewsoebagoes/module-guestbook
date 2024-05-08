@@ -34,7 +34,7 @@
         ],
         'seat_number' => [
             'label' => __('guestbook.label.seat_number'),
-            'type' => 'number'
+            'type' => 'text'
         ],
         'qrcode_value' => [
             'label' => __('guestbook.label.qrcode_value'),

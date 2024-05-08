@@ -18,6 +18,6 @@
     'scan'          => 'Scan',
     'attendance' => 'Kehadiran',
     'event' => 'Acara',
-    'screen'    => 'Screen'
-
+    'screen'    => 'Screen',
+    'gb_guests' => 'Tami'
 ];

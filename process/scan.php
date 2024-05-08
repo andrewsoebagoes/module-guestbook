@@ -3,6 +3,7 @@
 use Core\Page;
 use Core\Request;
 use Core\Database;
+use Core\Event;
 use Modules\Crud\Libraries\Repositories\CrudRepository;
 
 // init table fields
@@ -55,11 +56,14 @@ if (Request::isMethod('POST')) {
                 // Jika belum ada data di gb_attendances untuk tamu tersebut, lakukan insert
                 if (!$attendance) {
                     // Insert data ke tabel gb_attendances
-                    $db->insert('gb_attendances', [
+                    $attendance = $db->insert('gb_attendances', [
                         'guest_id' => $guestData->id,
                         'created_by' => auth()->id,
                         'created_at' => $currentTime
                     ]);
+
+                    // trigger event
+                    Event::trigger('guestbook/scan-success', $attendance);
 
                     // Tampilkan pesan sukses
                     set_flash_msg(['success' => "Halo selamat datang $guestData->name"]);

@@ -1,0 +1,1 @@
+ALTER TABLE `gb_guests` CHANGE `seat_number` `seat_number` VARCHAR(100) NOT NULL;

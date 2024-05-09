@@ -42,11 +42,8 @@
         ],
     ],
     'gb_attendances' => [
-        'event_id' => [
-            'label' => __('guestbook.label.event'),
-            'type' => 'options-obj:gb_events,id,name'
-        ],
-        'guest_name' => [
+        
+        'guest_id' => [
             'label' => __('guestbook.label.guest'),
             'type' => 'options-obj:gb_guests,id,name'
         ],
@@ -56,7 +53,7 @@
         ],
         'created_at' => [
             'label' => __('guestbook.label.created_at'),
-            'type' => 'text'
+            'type'  => 'datetime-local'
         ],
     ]
 

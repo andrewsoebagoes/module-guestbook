@@ -35,7 +35,7 @@
 }
 
 .login-5 .bg-img {
-    background: url(../img/education.jpg) top left repeat;
+    background: url(../img/screen-bg.jpg) top left no-repeat;
     background-size: cover;
     z-index: 999;
     min-height: 100vh;

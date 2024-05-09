@@ -62,7 +62,7 @@
                 const response = await request.json()
                 const name = response.data.name
                 const guestNameElement = document.querySelector('#guestName');
-                guestNameElement.innerHTML = `<h1 style="font-size:72px;margin-bottom:0;"><span>Selamat Datang</span> ${name}</h1>`;
+                guestNameElement.innerHTML = `<h1 style="font-size:72px;margin-bottom:0;"><span style="display:block">Selamat Datang</span> ${name}</h1>`;
                 setTimeout(showScreen, 10000);
                 return;
             } catch (error) {

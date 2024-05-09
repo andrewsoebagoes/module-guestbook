@@ -58,7 +58,7 @@ FROM gb_attendances
 JOIN users ON gb_attendances.created_by = users.id
 JOIN gb_guests ON gb_attendances.guest_id = gb_guests.id
 JOIN gb_events ON gb_guests.event_id = gb_events.id
-$where ORDER BY " . $col_order . " " . $order[0]['dir'] . " LIMIT $start,$length";
+$where";
 
 $total = $db->exec('exists');
 

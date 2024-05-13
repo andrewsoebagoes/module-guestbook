@@ -53,7 +53,7 @@
         ],
         'created_at' => [
             'label' => __('guestbook.label.created_at'),
-            'type'  => 'datetime-local'
+              'type'  => 'datetime-local'
         ],
     ]
 

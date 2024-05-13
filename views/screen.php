@@ -39,11 +39,10 @@
                         <div class="line"></div>
                         <div class="line"></div>
                     </div>
-                        <div class="info">
-                            <div class="name_wrap" id="guestName">
-                            </div>
+                    <div class="info">
+                        <div class="name_wrap" id="guestName">
                         </div>
-              
+                    </div>
                 </div>
             </div>
         </div>
@@ -63,7 +62,7 @@
                 const response = await request.json()
                 const name = response.data.name
                 const guestNameElement = document.querySelector('#guestName');
-                guestNameElement.innerHTML = `<h1><span>Selamat Datang</span> ${name}</h1>`;
+                guestNameElement.innerHTML = `<h1 style="font-size:72px;margin-bottom:0;"><span style="display:block">Selamat Datang</span> ${name}</h1>`;
                 setTimeout(showScreen, 10000);
                 return;
             } catch (error) {
